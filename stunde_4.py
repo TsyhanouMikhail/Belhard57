@@ -4,7 +4,7 @@
 # text[0], text[-1] = text[-1], text[0]
 # text: str = " ".join(text)
 # print(text)
-from typing import list #без импорта надо убрать лист
+from typing import list
 
 
 text: list[str] = input().split()
