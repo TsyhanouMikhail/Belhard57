@@ -4,7 +4,6 @@ text: str = input("Введите предложение: ")
 print(text)
 
 words = text.split()
-#print(words)
 words = "-".join(words)
 print(words)
 
