@@ -3,3 +3,26 @@
 # имена тех, у кого не указана почта (нет ключа email или значение этого ключа -
 # пустая строка)
 
+users = {
+    1: {
+        "name": "vasya",
+        "tel": "+375-29-123-45-67",
+        "email": "123@email.com"
+    },
+    2: {
+        "name": "gretta",
+        "tel": "+375-29-888-45-67",
+        # "email": "123@email.com"
+    },
+    3: {
+        "name": "tuborg",
+        "tel": "+375-29-999-45-67",
+        "email": ""
+    }
+
+}
+for user in users.values():
+    if not user.get("email"):
+        print(user["name"])
+
+
