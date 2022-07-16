@@ -2,18 +2,17 @@
 from typing import List
 
 vvodnoe_number = 1522605027922533360535618378132637429718068114961380688657908494580122963258952897654000350692006139
-polovina_number = int(1522605027922533360535618378132637429718068114961380688657908494580122963258952897654000350692006140 / 2)
-delitel: List = [str]
-ii: str
+delitel: List = []
 
-for i in range(1, polovina_number):
+for i in range(9999, 100000):
     if vvodnoe_number % i == 0:
-        ii = i
-        if len(str(ii)) == 5:
-            delitel.append(i)
-            if len(delitel) == 3:
-                break
+        delitel.append(i)
+        if len(delitel) == 2:
+            break
 
-print("2 пятизначных числа это: ", delitel)
-# Логика тут моя, а не гугла! закончил в 4:34
+if len(delitel) > 0:
+    print("Искомые числа(о) это: ", delitel)
+else:
+    print("Нет решения.")
+# Решил. RSA 100
 
