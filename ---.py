@@ -1,26 +1,15 @@
-# переставить местами первое и последнее слово
-
-# text: list[str] = input().split()
-# text[0], text[-1] = text[-1], text[0]
-# text: str = " ".join(text)
-# print(text)
-from typing import List
-
-
-text: List[str] = input().split()
-text[0], text[-1] = text[-1], text[0]
-text: str = " ".join(text)
-print(text)
-
-
-#from typing import List
-
-
-text = "hello world"
-print(text)
-letters: List[str] = list(text)
-print(letters)
-
+n=int(input())
+t=[[0]*n for i in range (n)]
+i,j=0,0
+for k in range(1, n*n+1):
+  t[i][j]=k
+  if k==n*n: break
+  if i<=j+1 and i+j<n-1: j+=1
+  elif i<j and i+j>=n-1: i+=1
+  elif i>=j and i+j>n-1: j-=1
+  elif i>j+1 and i+j<=n-1: i-=1
+for i in range(n):
+  print(*t[i])
 
 
 
